@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/food_app_nav"
+    app:startDestination="@id/mainDish">
+
+    <fragment
+        android:id="@+id/mainDish"
+        android:name="com.example.appdatmonan.MainDish"
+        android:label="fragment_main_dish"
+        tools:layout="@layout/fragment_main_dish" >
+        <action
+            android:id="@+id/action_mainDish_to_supDish"
+            app:destination="@id/supDish" />
+    </fragment>
+    <fragment
+        android:id="@+id/supDish"
+        android:name="com.example.appdatmonan.SupDish"
+        android:label="fragment_sup_dish"
+        tools:layout="@layout/fragment_sup_dish" >
+        <action
+            android:id="@+id/action_supDish_to_desert"
+            app:destination="@id/desert" />
+    </fragment>
+    <fragment
+        android:id="@+id/desert"
+        android:name="com.example.appdatmonan.Desert"
+        android:label="fragment_desert"
+        tools:layout="@layout/fragment_desert" >
+        <action
+            android:id="@+id/action_desert_to_drink"
+            app:destination="@id/drink" />
+    </fragment>
+    <fragment
+        android:id="@+id/drink"
+        android:name="com.example.appdatmonan.Drink"
+        android:label="fragment_drink"
+        tools:layout="@layout/fragment_drink" >
+        <action
+            android:id="@+id/action_drink_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.appdatmonan.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>
